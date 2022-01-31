@@ -1,0 +1,2 @@
+D:\Skeleton\Skeleton\Testing6\obj\Debug\Testing6.csproj.AssemblyReference.cache
+D:\Skeleton\Skeleton\Testing6\obj\Debug\Testing6.csproj.CoreCompileInputs.cache

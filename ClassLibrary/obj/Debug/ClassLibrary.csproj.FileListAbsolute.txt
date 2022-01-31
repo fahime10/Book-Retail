@@ -1,0 +1,6 @@
+D:\Skeleton\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Skeleton\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb

@@ -4,3 +4,9 @@ D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReferenc
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Documents\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Documents\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Documents\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Documents\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Documents\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Documents\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb

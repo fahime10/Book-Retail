@@ -1,0 +1,14 @@
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Testing1.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Testing1.pdb
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\VS 2019 pt2\Testing1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\VS 2019 pt2\Testing1\obj\Debug\TestingStock.csproj.AssemblyReference.cache
+H:\Desktop\Agile\VS 2019 pt2\Testing1\obj\Debug\TestingStock.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\VS 2019 pt2\Testing1\obj\Debug\TestingStock.csproj.CopyComplete
+H:\Desktop\Agile\VS 2019 pt2\Testing1\obj\Debug\Testing1.dll
+H:\Desktop\Agile\VS 2019 pt2\Testing1\obj\Debug\Testing1.pdb

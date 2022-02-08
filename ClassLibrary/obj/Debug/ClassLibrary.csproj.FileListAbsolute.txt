@@ -4,3 +4,9 @@ D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReferenc
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
 D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Desktop\Agile\VS 2019 pt2\ClassLibrary\obj\Debug\ClassLibrary.pdb

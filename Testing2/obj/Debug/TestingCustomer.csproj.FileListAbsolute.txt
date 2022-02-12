@@ -28,3 +28,5 @@ H:\Documents\Skeleton\Testing2\obj\Debug\Testing2.pdb
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code\Testing2\obj\Debug\TestingCustomer.csproj.CopyComplete
+H:\Documents\Skeleton\Testing2\bin\Debug\ClassLibrary.dll
+H:\Documents\Skeleton\Testing2\bin\Debug\ClassLibrary.pdb

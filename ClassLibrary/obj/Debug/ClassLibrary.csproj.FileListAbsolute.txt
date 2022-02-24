@@ -22,3 +22,9 @@ H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\ClassLibrary\obj\D
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb

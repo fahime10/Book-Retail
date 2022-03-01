@@ -4,7 +4,7 @@ namespace ClassLibrary
 {
     public class clsStock
     {
-        private int bookID;
+        private int bookId;
         private DateTime dateReceived;
         private String bookTitle;
         private bool bookAvailability;
@@ -37,11 +37,11 @@ namespace ClassLibrary
         {
             get
             {
-                return bookID;
+                return bookId;
             }
             set
             {
-                bookID = value;
+                bookId = value;
             }
         }
         public string BookTitle
@@ -80,13 +80,24 @@ namespace ClassLibrary
 
         public bool Find(int bookId)
         {
-            bookID = 4;
-            dateReceived = Convert.ToDateTime("25/02/2022");
-            bookTitle = "Leadership";
-            bookAvailability = true;
-            bookQuantity = 100;
-            bookPrice = 15.00;
-            return true;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@BookId", bookId);
+            DB.Execute("sproc_tblStock_FilterByBookId");
+
+            if(DB.Count == 1)
+            {
+                this.bookId = Convert.ToInt32(DB.DataTable.Rows[0]["BookId"]);
+                bookTitle = Convert.ToString(DB.DataTable.Rows[0]["BookTitle"]);
+                bookPrice = Convert.ToDouble(DB.DataTable.Rows[0]["BookPrice"]);
+                bookAvailability = Convert.ToBoolean(DB.DataTable.Rows[0]["BookAvailability"]);
+                bookQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["BookQuantity"]);
+                dateReceived = Convert.ToDateTime(DB.DataTable.Rows[0]["DateReceived"]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

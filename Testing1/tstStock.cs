@@ -76,7 +76,7 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            int bookId = 4;
+            int bookId = 5;
             Found = ABook.Find(bookId);
             Assert.IsTrue(Found);
         }
@@ -86,13 +86,13 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int bookId = 4;
+            Boolean OK = false;
+            int bookId = 1;
             Found = ABook.Find(bookId);
             
-            if(ABook.BookId != 4)
+            if(Found == true && ABook.BookId == bookId)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }
@@ -102,13 +102,14 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int bookId = 4;
+            Boolean OK = false;
+            int bookId = 1;
             Found = ABook.Find(bookId);
+            DateTime dateReceived = Convert.ToDateTime("03/02/2022");
 
-            if(ABook.DateReceived != Convert.ToDateTime("25/02/2022"))
+            if(Found == true && ABook.DateReceived == dateReceived)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }
@@ -118,13 +119,14 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int BookId = 4;
-            Found = ABook.Find(BookId);
+            Boolean OK = false;
+            int bookId = 1;
+            Found = ABook.Find(bookId);
+            String bookTitle = "The Mammoth Book of CHESS";
 
-            if(ABook.BookTitle != "Leadership")
+            if(Found == true && ABook.BookTitle == bookTitle)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }
@@ -134,13 +136,14 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int BookId = 4;
-            Found = ABook.Find(BookId);
+            Boolean OK = false;
+            int bookId = 1;
+            Found = ABook.Find(bookId);
+            Boolean bookAvailability = true;
 
-            if(ABook.BookAvailability != true)
+            if(Found == true && ABook.BookAvailability == bookAvailability)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }
@@ -150,13 +153,14 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int BookId = 4;
-            Found = ABook.Find(BookId);
+            Boolean OK = false;
+            int bookId = 1;
+            Found = ABook.Find(bookId);
+            int bookQuantity = 20;
 
-            if(ABook.BookQuantity != 100)
+            if(Found == true && ABook.BookQuantity == bookQuantity)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }
@@ -166,13 +170,14 @@ namespace Testing1
         {
             clsStock ABook = new clsStock();
             Boolean Found = false;
-            Boolean OK = true;
-            int bookId = 4;
+            Boolean OK = false;
+            int bookId = 1;
             Found = ABook.Find(bookId);
+            double bookPrice = 12.5;
 
-            if(ABook.BookPrice != 15.00)
+            if(Found == true && ABook.BookPrice == bookPrice)
             {
-                OK = false;
+                OK = true;
             }
             Assert.IsTrue(OK);
         }

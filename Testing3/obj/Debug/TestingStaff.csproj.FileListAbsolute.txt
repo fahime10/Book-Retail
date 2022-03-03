@@ -84,3 +84,5 @@ C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\TestingStaff.csproj.C
 C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
 C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\Testing3.dll
 C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\Testing3.pdb
+H:\Documents\Skeleton\Testing3\bin\Debug\ClassLibrary.dll
+H:\Documents\Skeleton\Testing3\bin\Debug\ClassLibrary.pdb

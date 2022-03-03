@@ -40,3 +40,9 @@ H:\Desktop\Agile\Enhancement Week part 2\ClassLibrary\obj\Debug\ClassLibrary.csp
 H:\Desktop\Agile\Enhancement Week part 2\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Desktop\Agile\Enhancement Week part 2\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Desktop\Agile\Enhancement Week part 2\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb

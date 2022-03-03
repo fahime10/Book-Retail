@@ -103,6 +103,9 @@ namespace ClassLibrary
         public string Valid(string title, string price, string quantity, string dateReceived)
         {
             String Error = "";
+            DateTime DateTemp;
+            double cost;
+            int number;
             
             if(title.Length == 0)
             {
@@ -113,6 +116,67 @@ namespace ClassLibrary
             {
                 Error = Error + "The book title must be less than 51 characters : ";
             }
+
+
+            try
+            {
+                cost = Convert.ToDouble(price);
+
+                if (cost < 0.00)
+                {
+                    Error = Error + "The price cannot be lower than £0.00 : ";
+                }
+
+                if (cost > 1000.00)
+                {
+                    Error = Error + "The price cannot be more than £1000.00 : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The price given was not a valid price : ";
+            }
+
+
+            try
+            {
+                number = Convert.ToInt32(quantity);
+
+                if (number < 0)
+                {
+                    Error = Error + "The quantity cannot be less than 0 : ";
+                }
+
+                if (number > 200)
+                {
+                    Error = Error + "The quantity cannot be more than 200 : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The quantity given is not a valid data type : ";
+            }
+
+
+            try
+            {
+                DateTemp = Convert.ToDateTime(dateReceived);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "Date cannot be in the past : ";
+                }
+
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "Date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The date was not a valid date : ";
+            }
+
+
             return Error;
         }
     }

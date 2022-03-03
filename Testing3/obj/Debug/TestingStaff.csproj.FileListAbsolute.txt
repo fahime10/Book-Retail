@@ -68,3 +68,19 @@ H:\Desktop\Agile\Enhancement Week part 2\Testing3\obj\Debug\TestingStaff.csproj.
 H:\Desktop\Agile\Enhancement Week part 2\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
 H:\Desktop\Agile\Enhancement Week part 2\Testing3\obj\Debug\Testing3.dll
 H:\Desktop\Agile\Enhancement Week part 2\Testing3\obj\Debug\Testing3.pdb
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Testing3.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Testing3.pdb
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\ClassLibrary.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\ClassLibrary.pdb
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\TestingStaff.csproj.AssemblyReference.cache
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\TestingStaff.csproj.CoreCompileInputs.cache
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\Testing3.dll
+C:\Users\P2600429\Source\Repos\Skeleton\Testing3\obj\Debug\Testing3.pdb

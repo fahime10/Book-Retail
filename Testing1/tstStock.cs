@@ -7,6 +7,12 @@ namespace Testing1
     [TestClass]
     public class tstStock
     {
+        //some test data
+        string title = "Leadership";
+        string price = "15.00";
+        string quantity = "40";
+        string dateReceived = DateTime.Now.Date.ToString();
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -181,5 +187,112 @@ namespace Testing1
             }
             Assert.IsTrue(OK);
         }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            Error = ABook.Valid(title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMinLessThanOne()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMin()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "A";
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BoookTitleMinPlusOne()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "AA";
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMaxLessOne()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Title = Title.PadRight(49, 'A');
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMax()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Title = Title.PadRight(50, 'A');
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMid()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Title = Title.PadRight(25, 'A');
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleMaxPlusOne()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Title = Title.PadRight(51, 'A');
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BookTitleExtremeMax()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            String Title = "";
+            Title = title.PadRight(200, 'A');
+            Error = ABook.Valid(Title, price, quantity, dateReceived);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        /*[TestMethod]
+        public void DateReceivedExtremeMin()
+        {
+            clsStock ABook = new clsStock();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddYears(-100);
+            string DateReceived = TestDate.ToString();
+            Error = ABook.Valid(title, price, quantity, DateReceived);
+            Assert.AreNotEqual(Error, "");
+        }*/
     }
 }

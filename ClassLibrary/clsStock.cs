@@ -99,5 +99,21 @@ namespace ClassLibrary
                 return false;
             }
         }
+
+        public string Valid(string title, string price, string quantity, string dateReceived)
+        {
+            String Error = "";
+            
+            if(title.Length == 0)
+            {
+                Error = Error + "The book title may not be blank : ";
+            }
+
+            if(title.Length > 50)
+            {
+                Error = Error + "The book title must be less than 51 characters : ";
+            }
+            return Error;
+        }
     }
 }

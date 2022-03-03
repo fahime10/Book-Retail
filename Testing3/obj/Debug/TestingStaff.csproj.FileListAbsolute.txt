@@ -40,3 +40,17 @@ H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing3\obj\Debug
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing3\obj\Debug\Testing3.dll
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing3\obj\Debug\Testing3.pdb
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Testing3.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Testing3.pdb
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\Enhancement Week\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\Enhancement Week\Testing3\obj\Debug\TestingStaff.csproj.AssemblyReference.cache
+H:\Desktop\Agile\Enhancement Week\Testing3\obj\Debug\TestingStaff.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\Enhancement Week\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
+H:\Desktop\Agile\Enhancement Week\Testing3\obj\Debug\Testing3.dll
+H:\Desktop\Agile\Enhancement Week\Testing3\obj\Debug\Testing3.pdb

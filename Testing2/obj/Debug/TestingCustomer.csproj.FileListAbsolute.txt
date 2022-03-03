@@ -46,3 +46,19 @@ H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing2\obj\Debug
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing2\obj\Debug\TestingCustomer.csproj.CopyComplete
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing2\obj\Debug\Testing2.dll
 H:\Documents\Agile Visual Studios code 16-02-2022 3rd Attempt\Testing2\obj\Debug\Testing2.pdb
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Testing2.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Testing2.pdb
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\Enhancement Week\Testing2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\Enhancement Week\Testing2\obj\Debug\TestingCustomer.csproj.AssemblyReference.cache
+H:\Desktop\Agile\Enhancement Week\Testing2\obj\Debug\TestingCustomer.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\Enhancement Week\Testing2\obj\Debug\TestingCustomer.csproj.CopyComplete
+H:\Desktop\Agile\Enhancement Week\Testing2\obj\Debug\Testing2.dll
+H:\Desktop\Agile\Enhancement Week\Testing2\obj\Debug\Testing2.pdb

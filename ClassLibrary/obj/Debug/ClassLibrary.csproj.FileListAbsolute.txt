@@ -28,3 +28,9 @@ H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLi
 H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\Agile visual studios code 24-02-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Enhancement Week\ClassLibrary\obj\Debug\ClassLibrary.pdb

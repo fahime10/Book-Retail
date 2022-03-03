@@ -72,3 +72,5 @@ H:\Desktop\Agile\Enhancement Week part 2\Testing4\obj\Debug\TestingOrder.csproj.
 H:\Desktop\Agile\Enhancement Week part 2\Testing4\obj\Debug\TestingOrder.csproj.CopyComplete
 H:\Desktop\Agile\Enhancement Week part 2\Testing4\obj\Debug\Testing4.dll
 H:\Desktop\Agile\Enhancement Week part 2\Testing4\obj\Debug\Testing4.pdb
+H:\Documents\Skeleton\Testing4\bin\Debug\ClassLibrary.dll
+H:\Documents\Skeleton\Testing4\bin\Debug\ClassLibrary.pdb

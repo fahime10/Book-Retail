@@ -15,18 +15,40 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
+        //create a new instance of clsStock
         clsStock ABook = new clsStock();
-        //capture the attributes
-        ABook.BookId = Convert.ToInt32(txtBookId.Text);
-        ABook.BookTitle = txtBookTitle.Text;
-        ABook.BookPrice = Convert.ToDouble(txtBookPrice.Text);
-        ABook.BookQuantity = Convert.ToInt32(txtBookQuantity.Text);
-        ABook.DateReceived = Convert.ToDateTime(txtDateReceived.Text);
-        ABook.BookAvailability = chkBookAvailability.Checked;
-        //store the attributes in the session object
-        Session["ABook"] = ABook;
-        //navigate to the viewer page
-        Response.Redirect("StockViewer.aspx");
+        //capture the title
+        string bookTitle = txtBookTitle.Text;
+        //capture the price
+        string bookPrice = txtBookPrice.Text;
+        //capture the quantity
+        string bookQuantity = txtBookQuantity.Text;
+        //capture the date received
+        string dateReceived = txtDateReceived.Text;
+        //variable to store the error message
+        string Error = "";
+        //validate the data
+        Error = ABook.Valid(bookTitle, bookPrice, bookQuantity, dateReceived);
+        if (Error == "")
+        {
+            //capture the title
+            ABook.BookTitle = bookTitle;
+            //capture the price
+            ABook.BookPrice = Convert.ToDouble(bookPrice);
+            //capture the quantity
+            ABook.BookQuantity = Convert.ToInt32(bookQuantity);
+            //capture the date received
+            ABook.DateReceived = Convert.ToDateTime(dateReceived);
+            //store the book in the session object
+            Session["ABook"] = ABook;
+            //redirect to the viewer page
+            Response.Redirect("StockViewer.aspx");
+        }
+        else
+        {
+            //display error message
+            lblError.Text = Error;
+        }
     }
 
     protected void btnFind_Click(object sender, EventArgs e)

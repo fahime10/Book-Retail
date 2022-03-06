@@ -117,7 +117,7 @@ namespace Testing1
             Assert.AreEqual(AllBooks.ThisBook, TestItem);
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void UpdateMethodOK()
         {
             //create an instance of clsBookCollection
@@ -150,6 +150,93 @@ namespace Testing1
             AllBooks.Update();
             //find the record
             AllBooks.ThisBook.Find(PrimaryKey);
+        }
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create an instance of clsBookCollection
+            clsBookCollection AllBooks = new clsBookCollection();
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.BookId = 1;
+            TestItem.BookTitle = "Cooking book";
+            TestItem.BookPrice = 10.00;
+            TestItem.BookQuantity = 100;
+            TestItem.BookAvailability = true;
+            TestItem.DateReceived = DateTime.Now.Date;
+            //set ThisAddress to the test data
+            AllBooks.ThisBook = TestItem;
+            //add the record
+            PrimaryKey = AllBooks.Add();
+            //set the primary key of the test data
+            TestItem.BookId = PrimaryKey;
+            //find the record
+            AllBooks.ThisBook.Find(PrimaryKey);
+            //delete the record
+            AllBooks.Delete();
+            //now find the record
+            Boolean Found = AllBooks.ThisBook.Find(PrimaryKey);
+            //test to see that the values are the same
+            Assert.IsFalse(Found);
         }*/
+
+        [TestMethod]
+        public void ReportByBookTitleMethodOK()
+        {
+            //create an instance of the class with unfiltering results
+            clsBookCollection AllBooks = new clsBookCollection();
+            //create an instance of the filtered data
+            clsBookCollection FilteredBooks = new clsBookCollection();
+            //apply a blank string (should return all records)
+            FilteredBooks.ReportByBookTitle("");
+            //test to see that the two values are the same
+            Assert.AreEqual(AllBooks.Count, FilteredBooks.Count);
+        }
+
+        [TestMethod]
+        public void ReportByBookTitleNoneFound()
+        {
+            //create an instance of the filtered data
+            clsBookCollection FilteredBooks = new clsBookCollection();
+            //apply a title that doesn't exist
+            FilteredBooks.ReportByBookTitle("00000000");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredBooks.Count);
+        }
+
+        [TestMethod]
+        public void ReportByBookTitleTestDataFound()
+        {
+            //create an instance of the filtered data
+            clsBookCollection FilteredBooks = new clsBookCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //apply a title that doesn't exist
+            FilteredBooks.ReportByBookTitle("Cooking book");
+            //check that the correct number of records are found
+            if(FilteredBooks.Count == 2)
+            {
+                //check that the first record is id 7
+                if(FilteredBooks.BookList[0].BookId != 7)
+                {
+                    OK = false;
+                }
+                //check that the first records is id 15
+                if(FilteredBooks.BookList[1].BookId != 15)
+                {
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+            //test to see that there are no records
+            Assert.IsTrue(OK);
+        }
     }
     }

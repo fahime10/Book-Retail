@@ -8,9 +8,35 @@ using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+    //variable to store the primary key with page level scope
+    Int32 BookId;
     protected void Page_Load(object sender, EventArgs e)
     {
+        //get the number of the bookto be processed
+        BookId = Convert.ToInt32(Session["BookId"]);
+        if(IsPostBack == false)
+        {
+            //if this is not a new record
+            if(BookId != -1)
+            {
+                DisplayBook();
+            }
+        }
+    }
 
+    void DisplayBook()
+    {
+        //create an instance of clsBookCollection
+        clsBookCollection AllBooks = new clsBookCollection();
+        //find the record to update
+        AllBooks.ThisBook.Find(BookId);
+        //display the data for this record
+        txtBookId.Text = AllBooks.ThisBook.BookId.ToString();
+        txtBookTitle.Text = AllBooks.ThisBook.BookTitle;
+        txtBookPrice.Text = AllBooks.ThisBook.BookPrice.ToString();
+        txtBookQuantity.Text = AllBooks.ThisBook.BookQuantity.ToString();
+        txtDateReceived.Text = AllBooks.ThisBook.DateReceived.ToString();
+        chkBookAvailability.Checked = AllBooks.ThisBook.BookAvailability;
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
@@ -31,6 +57,8 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Error = ABook.Valid(bookTitle, bookPrice, bookQuantity, dateReceived);
         if (Error == "")
         {
+            //capture the id
+            ABook.BookId = BookId;
             //capture the title
             ABook.BookTitle = bookTitle;
             //capture the price
@@ -39,10 +67,30 @@ public partial class _1_DataEntry : System.Web.UI.Page
             ABook.BookQuantity = Convert.ToInt32(bookQuantity);
             //capture the date received
             ABook.DateReceived = Convert.ToDateTime(dateReceived);
-            //store the book in the session object
-            Session["ABook"] = ABook;
-            //redirect to the viewer page
-            Response.Redirect("StockViewer.aspx");
+            //capture availability
+            ABook.BookAvailability = chkBookAvailability.Checked;
+            //create a new instance of clsBookCollection
+            clsBookCollection AllBooks = new clsBookCollection();
+
+            //if this is a new record, then add the data
+            if(BookId == -1)
+            {
+                //set the ThisBook property
+                AllBooks.ThisBook = ABook;
+                //add the new record
+                AllBooks.Add();
+            }
+            else //otherwise, it must be an update
+            {
+                //find the record to update
+                AllBooks.ThisBook.Find(BookId);
+                //set the ThisAddress property
+                AllBooks.ThisBook = ABook;
+                //update the record
+                AllBooks.Update();
+            }
+            //redirect to the list page
+            Response.Redirect("StockList.aspx");
         }
         else
         {

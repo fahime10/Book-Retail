@@ -7,6 +7,8 @@ namespace ClassLibrary
     {
         //private data member for the list
         List<clsStock> bookList = new List<clsStock>();
+        //private data member for ThisBook
+        clsStock thisBook = new clsStock();
 
         public clsBookCollection()
         {
@@ -67,6 +69,49 @@ namespace ClassLibrary
 
             }
         }
-        public clsStock ThisBook { get; set; }
+
+        //public property for ThisBook
+        public clsStock ThisBook
+        {
+            get
+            {
+                return thisBook;
+            }
+            set
+            {
+                thisBook = value;
+            }
+        }
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values of thisBook
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@BookTitle", thisBook.BookTitle);
+            DB.AddParameter("@BookPrice", thisBook.BookPrice);
+            DB.AddParameter("@BookAvailability", thisBook.BookAvailability);
+            DB.AddParameter("@BookQuantity", thisBook.BookQuantity);
+            DB.AddParameter("@DateReceived", thisBook.DateReceived);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblStock_Insert");
+        }
+
+        public void Update()
+        {
+            //update an existing record based on the values of thisBook
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@BookId", thisBook.BookId);
+            DB.AddParameter("@BookTitle", thisBook.BookTitle);
+            DB.AddParameter("@BookPrice", thisBook.BookPrice);
+            DB.AddParameter("@BookAvailability", thisBook.BookAvailability);
+            DB.AddParameter("@BookQuantity", thisBook.BookQuantity);
+            DB.AddParameter("@DateReceived", thisBook.DateReceived);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_Update");
+        }
     }
 }

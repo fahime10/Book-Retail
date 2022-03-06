@@ -58,4 +58,54 @@ public partial class _1_List : System.Web.UI.Page
             lblError.Text = "Please select a record to edit from the list";
         }
     }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        //var to store the primary key value of the record to be deleted
+        Int32 BookId;
+        //if a record has been selected from the list
+        if(lstBookList.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            BookId = Convert.ToInt32(lstBookList.SelectedValue);
+            //store the data in the session object
+            Session["BookId"] = BookId;
+            //redirect to the delete page
+            Response.Redirect("StockConfirmDelete.aspx");
+        }
+        else //if no record has been selected
+        {
+            lblError.Text = "Please select a record to delete from the list";
+        }
+    }
+
+    protected void btnApply_Click(object sender, EventArgs e)
+    {
+        //create an instance of clsBookCollection
+        clsBookCollection AllBooks = new clsBookCollection();
+        AllBooks.ReportByBookTitle(txtEnterABookTitle.Text);
+        lstBookList.DataSource = AllBooks.BookList;
+        //set the name of the primary key
+        lstBookList.DataValueField = "BookId";
+        //set the name of the field to display
+        lstBookList.DataTextField = "BookTitle";
+        //bind the data to the list
+        lstBookList.DataBind();
+    }
+
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        //create an instance of clsBookCollection
+        clsBookCollection AllBooks = new clsBookCollection();
+        AllBooks.ReportByBookTitle("");
+        //clear any existing filter to tidy up in the interface
+        txtEnterABookTitle.Text = "";
+        lstBookList.DataSource = AllBooks.BookList;
+        //set the name of the primary key
+        lstBookList.DataValueField = "BookId";
+        //set the name of the field to display
+        lstBookList.DataTextField = "BookTitle";
+        //bind the data to the list
+        lstBookList.DataBind();
+    }
 }

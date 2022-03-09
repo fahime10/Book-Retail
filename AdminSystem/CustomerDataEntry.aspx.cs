@@ -30,4 +30,21 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Session["TheCustomer"] = TheCustomer;
         Response.Redirect("CustomerViewer.aspx");
     }
+
+    protected void btnFind_Click(object sender, EventArgs e)
+    {
+        clsCustomer TheCustomer = new clsCustomer();
+        Int32 CustomerID;
+        Boolean Found = false;
+        CustomerID = Convert.ToInt32(txtCustomerID.Text);
+        Found = TheCustomer.Find(CustomerID);
+        if (Found == true)
+        {
+            txtCustomerFirstName.Text = TheCustomer.CustomerFirstName;
+            txtCustomerLastName.Text = TheCustomer.CustomerLastName;
+            txtCustomerAddress.Text = TheCustomer.CustomerAddress;
+            txtCustomerAccCreated.Text = TheCustomer.CustomerAccCreated.ToString();
+        }
+
+    }
 }

@@ -75,5 +75,110 @@ namespace Testing2
             TheCustomer.ExistingAcc = TestData;
             Assert.AreEqual(TheCustomer.ExistingAcc, TestData);
         }
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            Assert.IsTrue(Found);
+
+        }
+
+        [TestMethod]
+        public void TestCustomerIDFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if (TheCustomer.CustomerID != 1)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+
+        }
+
+        [TestMethod]
+        public void TestCustomerAccCreatedFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if (TheCustomer.CustomerAccCreated != Convert.ToDateTime("05/10/2020"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCustomerFirstNameFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if ( TheCustomer.CustomerFirstName != "Joe")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+
+        public void TestCustomerLastNameFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if (TheCustomer.CustomerLastName != "Bloggs")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+
+        public void TestCustomerAddressFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if (TheCustomer.CustomerAddress != "33 Tor Church Road, Torquay,TQ2 5UP")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+
+        public void TestExistingAccFound()
+        {
+            clsCustomer TheCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CustomerID = 1;
+            Found = TheCustomer.Find(CustomerID);
+            if (TheCustomer.ExistingAcc != true)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
     }
 }

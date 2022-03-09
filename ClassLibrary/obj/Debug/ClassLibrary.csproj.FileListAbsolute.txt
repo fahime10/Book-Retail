@@ -64,3 +64,9 @@ H:\Documents\Agile visual studios code 09-03-2022 2nd part\ClassLibrary\obj\Debu
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.pdb

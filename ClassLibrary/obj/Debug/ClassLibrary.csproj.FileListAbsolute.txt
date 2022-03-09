@@ -52,3 +52,9 @@ C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.cspr
 C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\P2600429\Source\Repos\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\bin\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\bin\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile Visual Studio Code 09-03-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb

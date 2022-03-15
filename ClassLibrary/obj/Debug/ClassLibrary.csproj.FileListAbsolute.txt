@@ -70,3 +70,9 @@ H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug
 H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\Agile visual studio code 09-03-2022 3rd part\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Week 23 attempt 3\ClassLibrary\obj\Debug\ClassLibrary.pdb

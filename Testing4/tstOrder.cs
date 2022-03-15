@@ -15,6 +15,32 @@ namespace Testing4
         }
 
         [TestMethod]
+        public void FindMethodOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            double totalPrice = 33.46;
+            Found = AnOrder.Find(totalPrice);
+            Assert.IsTrue(Found);
+
+        }
+
+        [TestMethod]
+        public void TestTotalPriceFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            double totalPrice = 33.46;
+            Found = AnOrder.Find(totalPrice);
+            if (AnOrder.totalPrice != 33.46)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
         public void isStaffOK()
         {
             clsOrder AnOrder = new clsOrder();

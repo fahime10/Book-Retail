@@ -118,3 +118,19 @@ H:\Documents\Agile visual studios code 09-03-2022 2nd part\Testing3\obj\Debug\Te
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\Testing3\obj\Debug\Testing3.dll
 H:\Documents\Agile visual studios code 09-03-2022 2nd part\Testing3\obj\Debug\Testing3.pdb
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Testing3.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Testing3.pdb
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\obj\Debug\TestingStaff.csproj.AssemblyReference.cache
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\obj\Debug\TestingStaff.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\obj\Debug\Testing3.dll
+H:\Desktop\Agile\Week 23 attempt 3\Testing3\obj\Debug\Testing3.pdb

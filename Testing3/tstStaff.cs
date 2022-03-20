@@ -80,5 +80,116 @@ namespace Testing3
             //checks to see if they are equal
             Assert.AreEqual(AStaff.StaffID, TrueData);
         }
+        [TestMethod]
+        public void FindMethodOK()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            //creates a Integer test data 
+            Boolean Found = false;
+            Int32 ID = 5;
+
+            //assigns the data in the sql table equal to the variable above
+            Found = AStaff.Find(ID);
+            //checks to see if they are equal
+            Assert.IsTrue(Found);
+        }
+        [TestMethod]
+        public void TestStaffFirstNameFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+            
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 5;
+
+            
+            Found = AStaff.Find(ID);
+            if (AStaff.StaffFirstName != "Adam") 
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStaffLastNameFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 5;
+
+
+            Found = AStaff.Find(ID);
+            if (AStaff.StaffLastName != "Smith")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStaffEmployedFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 5;
+
+
+            Found = AStaff.Find(ID);
+            if (AStaff.StaffEmployed != true)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStaffIDFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID =5;
+
+
+            Found = AStaff.Find(ID);
+            if (AStaff.StaffID != 5)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStaffEndDateFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 5;
+            Found = AStaff.Find(ID);
+            if (AStaff.StaffEndDate != Convert.ToDateTime("13/06/2022"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStaffSalaryFound()
+        {   //create an instance of the class we want to create
+            clsStaff AStaff = new clsStaff();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 5;
+            Found = AStaff.Find(ID );
+            if (AStaff.StaffSalary != 20000)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
     }
 }

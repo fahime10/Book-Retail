@@ -33,13 +33,13 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Boolean Found = false;
         StaffID = Convert.ToInt32(txtStaffID.Text);
         Found = AStaff.Find(StaffID);
-        if (Found == true) {
-            txtStaffFirstName.Text= AStaff.StaffFirstName;
+        if (Found == true)
+        {
+            txtStaffFirstName.Text = AStaff.StaffFirstName;
             txtStaffLastName.Text = AStaff.StaffLastName;
             txtStaffEndDate.Text = AStaff.StaffEndDate.ToString();
             txtStaffSalary.Text = AStaff.StaffSalary.ToString();
-
-
         }
+
     }
 }

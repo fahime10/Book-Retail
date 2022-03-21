@@ -13,7 +13,7 @@
         <asp:Label ID="lblStaffID" runat="server" Text="Staff ID" width="100px"></asp:Label>
         <asp:TextBox ID="txtStaffID" runat="server" Height="16px" Width="87px"></asp:TextBox>
 &nbsp;&nbsp;
-        <asp:Button ID="btnFind" runat="server" OnClick="Button1_Click" Text="Find" />
+        <asp:Button ID="BtnFind" runat="server" OnClick="BtnFind_Click" Text="Find" />
         <br />
         <br />
         <asp:Label ID="lblStaffFirstName" runat="server" Text="Staff First Name"></asp:Label>

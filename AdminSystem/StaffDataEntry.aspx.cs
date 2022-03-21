@@ -25,4 +25,21 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Session["AStaff"] = AStaff;
         Response.Redirect("StaffViewer.aspx");
     }
+
+    protected void BtnFind_Click(object sender, EventArgs e)
+    {
+        clsStaff AStaff = new clsStaff();
+        Int32 StaffID;
+        Boolean Found = false;
+        StaffID = Convert.ToInt32(txtStaffID.Text);
+        Found = AStaff.Find(StaffID);
+        if (Found == true) {
+            txtStaffFirstName.Text= AStaff.StaffFirstName;
+            txtStaffLastName.Text = AStaff.StaffLastName;
+            txtStaffEndDate.Text = AStaff.StaffEndDate.ToString();
+            txtStaffSalary.Text = AStaff.StaffSalary.ToString();
+
+
+        }
+    }
 }

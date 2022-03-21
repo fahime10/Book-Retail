@@ -77,7 +77,6 @@ namespace ClassLibrary
                 bookPrice = value;
             }
         }
-
         public bool Find(int bookId)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -99,7 +98,6 @@ namespace ClassLibrary
                 return false;
             }
         }
-
         public string Valid(string title, string price, string quantity, string dateReceived)
         {
             String Error = "";

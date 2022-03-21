@@ -99,6 +99,65 @@ namespace ClassLibrary
            
            
         }
-       
+
+        public string Valid(string staffFirstName, string staffLastName, string staffEndDate, string staffSalary)
+        {
+            String Error = "";
+            DateTime TempDate;
+            double Salary;
+            if (staffFirstName.Length == 0)
+            {
+                Error = Error + "The Staff's First Name may not be null : ";
+            }
+            if (staffFirstName.Length > 20)
+            {
+                Error = Error + "The Staff's First Name must be less than 20 characters : ";
+            }
+            if (staffLastName.Length == 0)
+            {
+                Error = Error + "The Staff's Last Name may not be null : ";
+            }
+            if (staffLastName.Length > 20)
+            {
+                Error = Error + "The Staff's Last Name must be less than 20 characters : ";
+            }
+
+            try
+            {
+                TempDate = Convert.ToDateTime(staffEndDate);
+                if (TempDate < DateTime.Now.Date)
+                {
+                    Error = Error + " Employment End Date cannot be in the past : ";
+                }
+                if (TempDate > DateTime.Now.Date)
+                {
+                    Error = Error + "Employment End Date cannot be after their end date : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The date was not a valid date : ";
+            }
+
+            try
+            {
+                Salary = Convert.ToDouble(staffSalary);
+
+                if (Salary < 0.00)
+                {
+                    Error = Error + "The Staff Salary cannot be lower than £0.00 : ";
+                }
+
+                if (Salary > 100000.00)
+                {
+                    Error = Error + "The Staff Salary cannot be more than £1,000,000.00 : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The price given was not a valid price : ";
+            }
+            return Error;
+        }
     }
 }

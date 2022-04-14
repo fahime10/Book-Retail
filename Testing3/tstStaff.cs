@@ -11,6 +11,7 @@ namespace Testing3
         string StaffLastName = "Smith";
         string StaffSalary = "20000";
         string StaffEndDate = DateTime.Now.Date.ToString();
+        string StaffEmployed = "true";
         [TestMethod]
         public void InstanceOK()
         {   //create an instance of the class we want to create
@@ -200,7 +201,7 @@ namespace Testing3
         {
             clsStaff AStaff = new clsStaff();
             String Error = "";
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate,StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate,StaffSalary,StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -209,7 +210,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string firstname = "";
-            Error = AStaff.Valid(firstname, StaffLastName,StaffEndDate,StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName,StaffEndDate,StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -218,7 +219,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string firstname = "A";
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -227,7 +228,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string firstname = "AA";
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error,"");
         }
         [TestMethod]
@@ -237,7 +238,7 @@ namespace Testing3
             String Error = "";
             string firstname = "";
             firstname = firstname.PadRight(19,'A');
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error,"");
         }
         [TestMethod]
@@ -247,7 +248,7 @@ namespace Testing3
             String Error = "";
             string firstname = "";
             firstname = firstname.PadRight(20, 'A');
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -257,7 +258,7 @@ namespace Testing3
             String Error = "";
             string firstname = "";
             firstname = firstname.PadRight(21, 'A');
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -267,7 +268,7 @@ namespace Testing3
             String Error = "";
             string firstname = "";
             firstname = firstname.PadRight(10, 'A');
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -277,7 +278,7 @@ namespace Testing3
             String Error = "";
             string firstname = "AA";
             firstname = firstname.PadRight(100, 'A');
-            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(firstname, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -286,7 +287,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string lastname = "";
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -295,7 +296,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string lastname = "A";
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -304,7 +305,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string lastname = "AA";
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -314,7 +315,7 @@ namespace Testing3
             String Error = "";
             string lastname = "";
             lastname = lastname.PadRight(19, 'A');
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -324,7 +325,7 @@ namespace Testing3
             String Error = "";
             string lastname = "";
             lastname = lastname.PadRight(20, 'A');
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -334,7 +335,7 @@ namespace Testing3
             String Error = "";
             string lastname = "";
             lastname = lastname.PadRight(21, 'A');
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -344,7 +345,7 @@ namespace Testing3
             String Error = "";
             string lastname = "";
             lastname = lastname.PadRight(10, 'A');
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -354,7 +355,7 @@ namespace Testing3
             String Error = "";
             string lastname = "AA";
             lastname = lastname.PadRight(100, 'A');
-            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, lastname, StaffEndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -364,7 +365,7 @@ namespace Testing3
             String Error = "";
             double Salary = -0.01;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreNotEqual(Error,"");
         }
         [TestMethod]
@@ -374,7 +375,7 @@ namespace Testing3
             String Error = "";
             double Salary = 0.00;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -384,7 +385,7 @@ namespace Testing3
             String Error = "";
             double Salary = 0.01;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -394,7 +395,7 @@ namespace Testing3
             String Error = "";
             double Salary = 99999;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -404,7 +405,7 @@ namespace Testing3
             String Error = "";
             double Salary = 100000.00;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -414,7 +415,7 @@ namespace Testing3
             String Error = "";
             double Salary = 100001.00;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -424,7 +425,7 @@ namespace Testing3
             String Error = "";
             double Salary = 50000;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -434,7 +435,7 @@ namespace Testing3
             String Error = "";
             double Salary = -1000000;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -444,7 +445,7 @@ namespace Testing3
             String Error = "";
             double Salary = 1000000;
             string Salaries = Salary.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salaries, StaffEmployed);
 
         }
         [TestMethod]
@@ -453,7 +454,7 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string Salary = "Not A Date";
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, Salary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -465,7 +466,7 @@ namespace Testing3
             TestingData = DateTime.Now.Date;
             TestingData = TestingData.AddDays(-1);
             string EndDate = TestingData.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -476,7 +477,7 @@ namespace Testing3
             DateTime TestingData;
             TestingData = DateTime.Now.Date;
             string EndDate = TestingData.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
@@ -488,7 +489,7 @@ namespace Testing3
             TestingData = DateTime.Now.Date;
             TestingData = TestingData.AddDays(1);
             string EndDate = TestingData.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
@@ -500,7 +501,7 @@ namespace Testing3
             TestingData = DateTime.Now.Date;
             TestingData = TestingData.AddYears(500);
             string EndDate = TestingData.ToString();
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error,"");
         }
         [TestMethod]
@@ -509,8 +510,9 @@ namespace Testing3
             clsStaff AStaff = new clsStaff();
             String Error = "";
             string EndDate = "Not A Date";
-            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary);
+            Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
             Assert.AreNotEqual(Error, "");
         }
+        
     }
 }

@@ -100,11 +100,12 @@ namespace ClassLibrary
            
         }
 
-        public string Valid(string staffFirstName, string staffLastName, string staffEndDate, string staffSalary)
+        public string Valid(string staffFirstName, string staffLastName, string staffEndDate, string staffSalary, string staffEmployed)
         {
             String Error = "";
             DateTime TempDate;
             double Salary;
+            bool Employed;
             if (staffFirstName.Length == 0)
             {
                 Error = Error + "The Staff's First Name may not be null : ";
@@ -124,15 +125,26 @@ namespace ClassLibrary
 
             try
             {
+                Employed = Convert.ToBoolean(staffEmployed);
                 TempDate = Convert.ToDateTime(staffEndDate);
                 if (TempDate < DateTime.Now.Date)
                 {
-                    Error = Error + " Employment End Date cannot be in the past : ";
+                    
+                    if (Employed)
+                    {
+                        Error = Error + " Employment End Date cannot be in the past whilst the Employee be Employed  : ";
+                    }
                 }
+
                 if (TempDate > DateTime.Now.Date)
                 {
-                    Error = Error + "Employment End Date cannot be after their end date : ";
+                    if (!Employed)
+                    {
+                        Error = Error + "Employment End Date cannot be in the future whilst the Employee is not Employed: ";
+
+                    }
                 }
+                    
             }
             catch
             {

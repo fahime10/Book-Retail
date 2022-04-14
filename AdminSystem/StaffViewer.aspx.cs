@@ -13,10 +13,10 @@ public partial class _1Viewer : System.Web.UI.Page
         clsStaff AStaff = new clsStaff();
         AStaff = (clsStaff)Session["AStaff"];
         Session["AStaff"] = AStaff;
-        Response.Write(AStaff.StaffID);
-        Response.Write(AStaff.StaffFirstName);
-        Response.Write(AStaff.StaffLastName);
-        Response.Write(AStaff.StaffEndDate);
-        Response.Write(AStaff.StaffSalary);
+        Response.Write(AStaff.StaffID+" ");
+        Response.Write(AStaff.StaffFirstName + " ");
+        Response.Write(AStaff.StaffLastName + " ");
+        Response.Write(AStaff.StaffEndDate + " ");
+        Response.Write(AStaff.StaffSalary + " ");
     }
 }

@@ -490,7 +490,7 @@ namespace Testing3
             TestingData = TestingData.AddDays(1);
             string EndDate = TestingData.ToString();
             Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
-            Assert.AreNotEqual(Error, "");
+            Assert.AreEqual(Error, "");
         }
         [TestMethod]
         public void StaffEndDateExtremeMax()
@@ -499,10 +499,10 @@ namespace Testing3
             String Error = "";
             DateTime TestingData;
             TestingData = DateTime.Now.Date;
-            TestingData = TestingData.AddYears(500);
+            TestingData = TestingData.AddYears(5000);
             string EndDate = TestingData.ToString();
             Error = AStaff.Valid(StaffFirstName, StaffLastName, EndDate, StaffSalary, StaffEmployed);
-            Assert.AreNotEqual(Error,"");
+            Assert.AreEqual(Error,"");
         }
         [TestMethod]
         public void StaffEndDateInvalidData()

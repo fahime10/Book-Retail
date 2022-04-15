@@ -115,4 +115,9 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtDateReceived.Text = ABook.DateReceived.ToString();
         }
     }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("StockList.aspx");
+    }
 }

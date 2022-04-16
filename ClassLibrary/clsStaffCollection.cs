@@ -6,6 +6,13 @@ namespace ClassLibrary
     public class clsStaffCollection
     {
         List<clsStaff> mStaffList = new List<clsStaff>();
+        clsStaff mThisStaff = new clsStaff();
+        public clsStaffCollection()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_tblStaff_SelectAll");
+            PopulateArray(DB);
+        }
         public List<clsStaff> StaffList
         {
             get
@@ -34,52 +41,44 @@ namespace ClassLibrary
             }
         }
 
-        //public property for ThisBook
         public clsStaff ThisStaff
         {
             get
             {
-                return ThisStaff;
+                //return the private data
+                return mThisStaff;
             }
             set
             {
-                ThisStaff = value;
-            }
+                //set the private data
+                mThisStaff = value;
+            } 
         }
 
+        //public property for ThisStaff
 
-        public void PopulateArray()
+        
+        public void PopulateArray(clsDataConnection DB)
         {
-            //populates the array list based on the data table in the parameter DB
-            //var for the index
             Int32 Index = 0;
-            //var to store the record count
             Int32 RecordCount;
-            //get the count of records
-            clsDataConnection DB = new clsDataConnection();
-            DB.Execute("sproc_tblStaff_SelectAll");
             RecordCount = DB.Count;
-            //clear the private array list
             StaffList = new List<clsStaff>();
-            //while there are records to process
             while (Index < RecordCount)
             {
-                //create a blank book
                 clsStaff AStaff = new clsStaff();
-                //read in the fields from the current record
-                AStaff.StaffID = Convert.ToInt32(DB.DataTable.Rows[Index]["BookId"]);
-                AStaff.StaffFirstName = Convert.ToString(DB.DataTable.Rows[Index]["BookTitle"]);
-                AStaff.StaffLastName = Convert.ToString(DB.DataTable.Rows[Index]["BookPrice"]);
-                AStaff.StaffEndDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["BookQuantity"]);
-                AStaff.StaffSalary = Convert.ToDouble(DB.DataTable.Rows[Index]["BookAvailability"]);
-                AStaff.StaffEmployed = Convert.ToBoolean(DB.DataTable.Rows[Index]["DateReceived"]);
-                //add the record to the private data member
+                AStaff.StaffID = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffID"]);
+                AStaff.StaffFirstName = Convert.ToString(DB.DataTable.Rows[Index]["StaffFirstName"]);
+                AStaff.StaffLastName = Convert.ToString(DB.DataTable.Rows[Index]["StaffLastName"]);
+                AStaff.StaffEndDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["StaffEndDate"]);
+                AStaff.StaffSalary = Convert.ToDouble(DB.DataTable.Rows[Index]["StaffSalary"]);
+                AStaff.StaffEmployed = Convert.ToBoolean(DB.DataTable.Rows[Index]["StaffEmployed"]);
                 StaffList.Add(AStaff);
-                //point at the next record
                 Index++;
             }
 
 
         }
+
     }
 }

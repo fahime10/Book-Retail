@@ -20,4 +20,22 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Session["AnOrder"] = AnOrder;
         Response.Redirect("OrderViewer.aspx");
     }
+
+    protected void BtnFind_Click(object sender, EventArgs e)
+    {
+        clsOrder AnOrder = new clsOrder();
+        Int32 OrderID;
+        Boolean Found = false;
+        OrderID = Convert.ToInt32(txtOrderID.Text);
+        Found = AnOrder.Find(OrderID);
+        if(Found == true)
+        {
+            txtUnitQuantity.Text = AnOrder.unitQuantity.ToString();
+            txtTotalPrice.Text = AnOrder.totalPrice.ToString();
+            txtShipAddress.Text = AnOrder.ShipAddress;
+            txtOrderPlacedDate.Text = AnOrder.DateAdded.ToString();
+
+
+        }
+    }
 }

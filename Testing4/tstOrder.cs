@@ -19,10 +19,25 @@ namespace Testing4
         {
             clsOrder AnOrder = new clsOrder();
             Boolean Found = false;
-            double totalPrice = 33.46;
-            Found = AnOrder.Find(totalPrice);
+            Int32 OrderID = 1;
+            Found = AnOrder.Find(OrderID);
             Assert.IsTrue(Found);
 
+        }
+
+        [TestMethod]
+        public void OrderIDFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.OrderID != 1)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(Found);
         }
 
         [TestMethod]
@@ -31,14 +46,78 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             Boolean Found = false;
             Boolean OK = true;
-            double totalPrice = 33.46;
-            Found = AnOrder.Find(totalPrice);
-            if (AnOrder.totalPrice != 33.46)
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.totalPrice != 12.3)
             {
                 OK = false;
             }
             Assert.IsTrue(OK);
         }
+
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.DateAdded != Convert.ToDateTime("10/11/2021"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestUnitQuantityFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.unitQuantity != 1)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(Found);
+
+        }
+
+        [TestMethod]
+        public void IsStaffFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.isStaff != false)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void ShipAddressFound()
+        {
+            clsOrder AnOrder = new clsOrder();
+            Boolean Found = false;
+            Boolean OK = true;
+            int OrderID = 1;
+            Found = AnOrder.Find(OrderID);
+            if (AnOrder.ShipAddress != "April Cottage, Lastingham, YO62 6TJ")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(Found);
+
+        }
+
+
 
         [TestMethod]
         public void isStaffOK()

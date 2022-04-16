@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test_Framework
+namespace Testing3
 {
+    [TestClass]
     public class tstStaffCollection
     {
         [TestMethod]
@@ -16,7 +14,7 @@ namespace Test_Framework
             clsStaffCollection AllAddress = new clsStaffCollection();
             Assert.IsNotNull(AllAddress);
         }
-    
+
         [TestMethod]
         public void StaffListOK()
         {
@@ -34,15 +32,7 @@ namespace Test_Framework
             Assert.AreEqual(AllStaff.StaffList, TestStaff);
 
         }
-        /*[TestMethod]
-        public void CountStaffOK()
-        {
-            clsStaffCollection AllStaff = new clsStaffCollection();
-            Int32 SomeCount = 5;
-            AllStaff.Count = SomeCount;
-            Assert.AreEqual(AllStaff.Count, SomeCount);
-        }
-        */
+        
         [TestMethod]
         public void ThisStaffPropertyOK()
         {
@@ -55,8 +45,10 @@ namespace Test_Framework
             TestStaff.StaffSalary = 20000;
             TestStaff.StaffEmployed = true;
             AllStaff.ThisStaff = TestStaff;
-            Assert.AreEqual(AllStaff.StaffList, TestStaff);
+            Assert.AreEqual(AllStaff.ThisStaff, TestStaff);
         }
+
+       
         [TestMethod]
         public void ListAndCountOK()
         {
@@ -73,7 +65,8 @@ namespace Test_Framework
             AllStaff.StaffList = TestStaff;
             Assert.AreEqual(AllStaff.Count, TestStaff.Count);
         }
-}
+    }
 }
 
-  
+
+

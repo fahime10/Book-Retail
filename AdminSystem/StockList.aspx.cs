@@ -108,4 +108,9 @@ public partial class _1_List : System.Web.UI.Page
         //bind the data to the list
         lstBookList.DataBind();
     }
+
+    protected void lstBookList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

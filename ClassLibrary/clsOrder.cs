@@ -5,12 +5,59 @@ namespace ClassLibrary
     public class clsOrder
     {
         private double mTotalPrice;
-        public int unitQuantity;
+        private DateTime mDateAdded;
+        private int mUnitQuantity;
+        private string mShipAddress;
+        private bool mIsStaff;
+        private int mOrderID;
 
-        public bool isStaff { get; set; }
+        public int unitQuantity
+        {
+            get
+            {
+                return mUnitQuantity;
+            }
 
-        public DateTime DateAdded { get; set; }
-        public string ShipAddress { get; set; }
+            set
+            {
+                mUnitQuantity = value;
+            }
+        }
+
+        public bool isStaff
+        {
+            get
+            {
+                return mIsStaff;
+            }
+            set
+            {
+                mIsStaff = value;
+            }
+        }
+
+        public DateTime DateAdded
+        {
+            get
+            {
+                return mDateAdded;
+            }
+            set
+            {
+                mDateAdded = value;
+            }
+        }
+        public string ShipAddress
+        {
+            get
+            {
+                return mShipAddress;
+            }
+            set
+            {
+                mShipAddress = value;
+            }
+        }
         public double totalPrice
         {
             get
@@ -22,12 +69,40 @@ namespace ClassLibrary
                 mTotalPrice = value;
             }
         }
-        public int OrderID { get; set; }
-
-        public bool Find(double totalPrice)
+        public int OrderID
         {
-            mTotalPrice = 33.46;
-            return true;
+            get
+            {
+                return mOrderID;
+            }
+            set
+            {
+                mOrderID = value;
+            }
+        }
+
+        public bool Find(int OrderID)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@OrderID", OrderID);
+            DB.Execute("sproc_tblOrder_FilterByOrderID");
+            if (DB.Count == 1)
+               {
+                   mTotalPrice = Convert.ToDouble(DB.DataTable.Rows[0]["totalPrice"]);
+                   mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["orderPlacedDate"]);
+                   mUnitQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["unitQuantity"]);
+                   mIsStaff = Convert.ToBoolean(DB.DataTable.Rows[0]["isStaff"]);
+                   mShipAddress = Convert.ToString(DB.DataTable.Rows[0]["ShipAddress"]);
+                   mOrderID = Convert.ToInt32(DB.DataTable.Rows[0]["OrderID"]);
+                   return true;
+
+               }
+               else
+               {
+                   return false;
+               }
+
+            
         }
     }
 }

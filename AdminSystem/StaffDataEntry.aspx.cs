@@ -16,7 +16,6 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         clsStaff AStaff = new clsStaff();
-        string StaffID = txtStaffID.Text;
         string StaffFirstName = txtStaffFirstName.Text;
         string StaffLastName = txtStaffLastName.Text;
         string StaffEndDate = txtStaffEndDate.Text;
@@ -26,14 +25,15 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
         if (Error == "")
         {
-            AStaff.StaffID = Convert.ToInt32(StaffID);
             AStaff.StaffFirstName = StaffFirstName;
             AStaff.StaffLastName = StaffLastName;
             AStaff.StaffEndDate = Convert.ToDateTime(StaffEndDate).Date;
             AStaff.StaffSalary = Convert.ToInt32(StaffSalary);
             AStaff.StaffEmployed = chkStaffEmployed.Checked;
-            Session["AStaff"] = AStaff;
-            Response.Redirect("StaffViewer.aspx");
+            clsStaffCollection StaffList = new clsStaffCollection();
+            StaffList.ThisStaff = AStaff;
+            StaffList.Add();
+            Response.Redirect("StaffList.aspx");
         }
         else
         {

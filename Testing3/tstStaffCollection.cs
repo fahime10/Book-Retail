@@ -48,7 +48,7 @@ namespace Testing3
             Assert.AreEqual(AllStaff.ThisStaff, TestStaff);
         }
 
-       
+
         [TestMethod]
         public void ListAndCountOK()
         {
@@ -64,6 +64,24 @@ namespace Testing3
             TestStaff.Add(TestItem);
             AllStaff.StaffList = TestStaff;
             Assert.AreEqual(AllStaff.Count, TestStaff.Count);
+        }
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            clsStaff TestItem = new clsStaff();
+            Int32 PrimaryKey = 0;
+            TestItem.StaffID = 5;
+            TestItem.StaffFirstName = "Adam";
+            TestItem.StaffLastName = "Smith";
+            TestItem.StaffEndDate = DateTime.Now.Date;
+            TestItem.StaffSalary = 20000;
+            TestItem.StaffEmployed = true;
+            AllStaff.ThisStaff = TestItem;
+            PrimaryKey = AllStaff.Add();
+            TestItem.StaffID = PrimaryKey;
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
         }
     }
 }

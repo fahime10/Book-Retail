@@ -54,10 +54,19 @@ namespace ClassLibrary
                 mThisStaff = value;
             } 
         }
-
+        public int Add()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StaffFirstName", mThisStaff.StaffFirstName);
+            DB.AddParameter("@StaffLastName", mThisStaff.StaffLastName);
+            DB.AddParameter("@StaffEndDate", mThisStaff.StaffEndDate);
+            DB.AddParameter("@StaffSalary", mThisStaff.StaffSalary);
+            DB.AddParameter("@StaffEmployed", mThisStaff.StaffEmployed);
+            return DB.Execute("sproc_tblStaff_Insert");
+        }
         //public property for ThisStaff
-
         
+
         public void PopulateArray(clsDataConnection DB)
         {
             Int32 Index = 0;

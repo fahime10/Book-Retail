@@ -23,4 +23,9 @@ public partial class _1_List : System.Web.UI.Page
         lstStaffList.DataValueField = "StaffFirstName";
         lstStaffList.DataBind();
     }
+    protected void btnAdd_Click1(object sender, EventArgs e)
+    {
+        Session["StaffID"] = -1;
+        Response.Redirect("StaffDataEntry.aspx"); 
+    }
 }

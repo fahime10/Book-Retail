@@ -32,7 +32,7 @@ namespace Testing3
             Assert.AreEqual(AllStaff.StaffList, TestStaff);
 
         }
-        
+
         [TestMethod]
         public void ThisStaffPropertyOK()
         {
@@ -82,6 +82,30 @@ namespace Testing3
             TestItem.StaffID = PrimaryKey;
             AllStaff.ThisStaff.Find(PrimaryKey);
             Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+        }
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            clsStaff TestItem = new clsStaff();
+            Int32 PrimaryKey = 0;
+            TestItem.StaffFirstName = "Adam";
+            TestItem.StaffLastName = "Smith";
+            TestItem.StaffEndDate = DateTime.Now.Date;
+            TestItem.StaffSalary = 20000;
+            TestItem.StaffEmployed = true;
+            AllStaff.ThisStaff = TestItem;
+            PrimaryKey = AllStaff.Add();
+            TestItem.StaffID = PrimaryKey;
+            TestItem.StaffFirstName = "Eve";
+            TestItem.StaffLastName = "West";
+            TestItem.StaffEndDate = DateTime.Now.Date;
+            TestItem.StaffSalary = 16000;
+            TestItem.StaffEmployed = false;
+            AllStaff.ThisStaff = TestItem;
+            AllStaff.Update();
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            Assert.Equals(AllStaff.ThisStaff,TestItem);
         }
     }
 }

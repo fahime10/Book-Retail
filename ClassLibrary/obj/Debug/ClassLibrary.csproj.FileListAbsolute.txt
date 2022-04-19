@@ -82,3 +82,9 @@ H:\Desktop\Agile\16-04\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyRefere
 H:\Desktop\Agile\16-04\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Desktop\Agile\16-04\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Desktop\Agile\16-04\ClassLibrary\obj\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\bin\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\bin\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agive visual studios code 19-04-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb

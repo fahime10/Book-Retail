@@ -65,8 +65,6 @@ namespace ClassLibrary
             return DB.Execute("sproc_tblStaff_Insert");
         }
         //public property for ThisStaff
-
-
         public void PopulateArray(clsDataConnection DB)
         {
             Int32 Index = 0;
@@ -105,6 +103,14 @@ namespace ClassLibrary
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@StaffID", mThisStaff.StaffID);
             DB.Execute("sproc_tblStaff_Delete");
+        }
+
+        public void ReportByFirstName(string StaffFirstName)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter(@"StaffFirstName", StaffFirstName);
+            DB.Execute("sproc_tblStaff_FilterByFirstName");
+            PopulateArray(DB);
         }
         //public property for ThisStaff
     }

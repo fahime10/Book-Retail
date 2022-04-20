@@ -61,4 +61,26 @@ public partial class _1_List : System.Web.UI.Page
             lblError.Text = "Please Select a record to edit from the list";
         }
     }
+
+    protected void btnApply_Click(object sender, EventArgs e)
+    {
+        clsStaffCollection AllStaff = new clsStaffCollection();
+        AllStaff.ReportByFirstName(txtFilter.Text);
+        lstStaffList.DataSource = AllStaff.StaffList;
+        lstStaffList.DataValueField = "StaffID";
+        lstStaffList.DataTextField = "StaffFirstName";
+        lstStaffList.DataBind();
+    }
+
+    protected void Clear_Click(object sender, EventArgs e)
+    {
+        clsStaffCollection AllStaff = new clsStaffCollection();
+        AllStaff.ReportByFirstName("");
+        txtFilter.Text = "";
+        lstStaffList.DataSource = AllStaff.StaffList;
+        lstStaffList.DataValueField = "StaffID";
+        lstStaffList.DataTextField = "StaffFirstName";
+        lstStaffList.DataTextField = "StaffLastName";
+        lstStaffList.DataBind();
+    }
 }

@@ -8,9 +8,18 @@ using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+    Int32 StaffID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        StaffID = Convert.ToInt32(Session["StaffID"]);
+        if (IsPostBack == false)
+        {
+            if (StaffID != -1)
+            {
+                DisplayAddress();
+            }
+        }
+
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
@@ -25,19 +34,31 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Error = AStaff.Valid(StaffFirstName, StaffLastName, StaffEndDate, StaffSalary, StaffEmployed);
         if (Error == "")
         {
+            AStaff.StaffID = StaffID;
             AStaff.StaffFirstName = StaffFirstName;
             AStaff.StaffLastName = StaffLastName;
             AStaff.StaffEndDate = Convert.ToDateTime(StaffEndDate).Date;
             AStaff.StaffSalary = Convert.ToInt32(StaffSalary);
             AStaff.StaffEmployed = chkStaffEmployed.Checked;
             clsStaffCollection StaffList = new clsStaffCollection();
-            StaffList.ThisStaff = AStaff;
-            StaffList.Add();
+            if (StaffID == -1)
+            {
+                StaffList.ThisStaff = AStaff;
+                StaffList.Add();
+            }
+            else
+            {
+                StaffList.ThisStaff.Find(StaffID);
+                StaffList.ThisStaff = AStaff;
+                StaffList.Update();
+
+            }
             Response.Redirect("StaffList.aspx");
         }
         else
         {
             lblError.Text = Error;
+
         }
     }
 
@@ -56,6 +77,18 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtStaffSalary.Text = AStaff.StaffSalary.ToString();
             chkStaffEmployed.Checked = AStaff.StaffEmployed;
         }
+
+    }
+    void DisplayAddress()
+    {
+        clsStaffCollection AllStaff = new clsStaffCollection();
+        AllStaff.ThisStaff.Find(StaffID);
+        txtStaffID.Text = AllStaff.ThisStaff.StaffID.ToString();
+        txtStaffFirstName.Text = AllStaff.ThisStaff.StaffFirstName;
+        txtStaffLastName.Text = AllStaff.ThisStaff.StaffLastName;
+        txtStaffEndDate.Text = AllStaff.ThisStaff.StaffEndDate.ToString();
+        txtStaffSalary.Text = AllStaff.ThisStaff.StaffSalary.ToString();
+        chkStaffEmployed.Checked = AllStaff.ThisStaff.StaffEmployed;
 
     }
 }

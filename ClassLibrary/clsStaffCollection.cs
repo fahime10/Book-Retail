@@ -52,7 +52,7 @@ namespace ClassLibrary
             {
                 //set the private data
                 mThisStaff = value;
-            } 
+            }
         }
         public int Add()
         {
@@ -65,7 +65,7 @@ namespace ClassLibrary
             return DB.Execute("sproc_tblStaff_Insert");
         }
         //public property for ThisStaff
-        
+
 
         public void PopulateArray(clsDataConnection DB)
         {
@@ -88,16 +88,23 @@ namespace ClassLibrary
 
 
         }
-        public int Update()
+        public void Update()
         {
             clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("StaffID", mThisStaff.StaffID);
+            DB.AddParameter("@StaffID", mThisStaff.StaffID);
             DB.AddParameter("@StaffFirstName", mThisStaff.StaffFirstName);
             DB.AddParameter("@StaffLastName", mThisStaff.StaffLastName);
             DB.AddParameter("@StaffEndDate", mThisStaff.StaffEndDate);
             DB.AddParameter("@StaffSalary", mThisStaff.StaffSalary);
             DB.AddParameter("@StaffEmployed", mThisStaff.StaffEmployed);
-            return DB.Execute("sproc_tblStaff_Update");
+            DB.Execute("sproc_tblStaff_Update");
+        }
+
+        public void Delete()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StaffID", mThisStaff.StaffID);
+            DB.Execute("sproc_tblStaff_Delete");
         }
         //public property for ThisStaff
     }

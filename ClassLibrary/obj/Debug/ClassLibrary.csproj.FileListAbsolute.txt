@@ -94,3 +94,9 @@ H:\Documents\Agile visual studios code 19-04-2022 week 25\ClassLibrary\obj\Debug
 H:\Documents\Agile visual studios code 19-04-2022 week 25\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Documents\Agile visual studios code 19-04-2022 week 25\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Documents\Agile visual studios code 19-04-2022 week 25\ClassLibrary\obj\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\bin\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\bin\Debug\ClassLibrary.pdb
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
+\\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb

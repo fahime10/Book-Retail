@@ -104,5 +104,44 @@ namespace ClassLibrary
 
             
         }
+
+        public string Valid(Int32 OrderID, Int32 UnitQunatity, Double TotalPrice, string ShipAddress, string OrderDate)
+        {
+            String Error = "";
+            DateTime DateTemp;
+
+            if (ShipAddress.Length == 0)
+            {
+                Error = Error + "The ship address may not be blank";
+            }
+
+            if (ShipAddress.Length > 100)
+            {
+                Error = Error + "The ship address must not exceed 100 characters. ";
+            }
+            try
+            {
+                DateTemp = Convert.ToDateTime(OrderDate);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the past. ";
+                }
+
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the future. ";
+                }
+
+            }
+            catch
+            {
+                Error = Error + "The date was not a valid date! ";
+            }
+            
+
+            return Error;
+        }
+
+
     }
 }

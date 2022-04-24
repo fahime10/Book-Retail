@@ -7,6 +7,13 @@ namespace Testing4
     [TestClass]
     public class tstOrder
     {
+        //good test data
+        Int32 OrderID = 1;
+        Int32 UnitQuantity = 1;
+        Double TotalPrice = 12.3;
+        string ShipAddress = "April Cottage, Lastingham, YO62 6TJ";
+        string OrderDate = DateTime.Now.Date.ToString();
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -175,6 +182,172 @@ namespace Testing4
             Assert.AreEqual(AnOrder.OrderID, TestData);
         }
         
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void ShipAddressinLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ShipAddressMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "a";
+
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ShipAddressMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "aa";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ShipAddressMaxLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ShipAddressMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ShipAddressMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void ShipAddressMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "";
+            ShipAddress = ShipAddress.PadRight(101, 'a');
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ShipAddressExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string ShipAddress = "";
+            ShipAddress = ShipAddress.PadRight(500, 'a');
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+        
+        [TestMethod]
+        public void OrderDateExtremeMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddYears(-100);
+            string OrderDate = TestDate.ToString();
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderDateMinLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddDays(-1);
+            string OrderDate = TestDate.ToString();
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderDateMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            string OrderDate = TestDate.ToString();
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderDateMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddDays(1);
+            string OrderDate = TestDate.ToString();
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderDateExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddYears(100);
+            string OrderDate = TestDate.ToString();
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderDateInvalidData()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string OrderDate = "This is not a date! ";
+            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
     }
 }

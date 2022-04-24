@@ -182,3 +182,19 @@ H:\Desktop\Agile\16-04\Testing3\obj\Debug\Testing3.pdb
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\Testing3\obj\Debug\Testing3.dll
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 21-04-2022\Testing3\obj\Debug\Testing3.pdb
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Testing3.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Testing3.pdb
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\24-04\Testing3\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\24-04\Testing3\obj\Debug\TestingStaff.csproj.AssemblyReference.cache
+H:\Desktop\Agile\24-04\Testing3\obj\Debug\TestingStaff.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\24-04\Testing3\obj\Debug\TestingStaff.csproj.CopyComplete
+H:\Desktop\Agile\24-04\Testing3\obj\Debug\Testing3.dll
+H:\Desktop\Agile\24-04\Testing3\obj\Debug\Testing3.pdb

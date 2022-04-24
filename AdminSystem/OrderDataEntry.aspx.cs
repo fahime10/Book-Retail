@@ -16,9 +16,25 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         clsOrder AnOrder = new clsOrder();
-        AnOrder.ShipAddress = txtShipAddress.Text;
-        Session["AnOrder"] = AnOrder;
-        Response.Redirect("OrderViewer.aspx");
+        string ShipAddress = txtShipAddress.Text;
+        string OrderDate = txtOrderPlacedDate.Text;
+        string UnitQuantity = txtUnitQuantity.Text;
+        string OrderID = txtOrderID.Text;
+        string TotalPrice = txtTotalPrice.Text;
+
+        string Error = "";
+        Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+        if (Error == "")
+        {
+            AnOrder.ShipAddress = ShipAddress;
+            AnOrder.OrderDate =Convert.ToDateTime(OrderDate);
+            Session["An Order"] = AnOrder;
+            Response.Write("OrderViewer.aspx");
+        }
+        else
+        {
+            lblError.Text = Error;
+        }
     }
 
     protected void BtnFind_Click(object sender, EventArgs e)
@@ -33,7 +49,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtUnitQuantity.Text = AnOrder.unitQuantity.ToString();
             txtTotalPrice.Text = AnOrder.totalPrice.ToString();
             txtShipAddress.Text = AnOrder.ShipAddress;
-            txtOrderPlacedDate.Text = AnOrder.DateAdded.ToString();
+            txtOrderPlacedDate.Text = AnOrder.OrderDate.ToString();
 
 
         }

@@ -8,9 +8,8 @@ namespace Testing4
     public class tstOrder
     {
         //good test data
-        Int32 OrderID = 1;
-        Int32 UnitQuantity = 1;
-        Double TotalPrice = 12.3;
+        string UnitQuantity = "1";
+        string TotalPrice = "12.3";
         string ShipAddress = "April Cottage, Lastingham, YO62 6TJ";
         string OrderDate = DateTime.Now.Date.ToString();
 
@@ -70,7 +69,7 @@ namespace Testing4
             Boolean OK = true;
             int OrderID = 1;
             Found = AnOrder.Find(OrderID);
-            if (AnOrder.DateAdded != Convert.ToDateTime("10/11/2021"))
+            if (AnOrder.OrderDate != Convert.ToDateTime("10/11/2021"))
             {
                 OK = false;
             }
@@ -141,8 +140,8 @@ namespace Testing4
         {
             clsOrder AnOrder = new clsOrder();
             DateTime TestData = DateTime.Now.Date;
-            AnOrder.DateAdded = TestData;
-            Assert.AreEqual(AnOrder.DateAdded, TestData);
+            AnOrder.OrderDate = TestData;
+            Assert.AreEqual(AnOrder.OrderDate, TestData);
             
         }
 
@@ -187,7 +186,7 @@ namespace Testing4
         {
             clsOrder AnOrder = new clsOrder();
             String Error = "";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -197,7 +196,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -207,8 +206,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "a";
-
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -218,7 +216,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "aa";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -228,7 +226,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
 
         }
@@ -239,7 +237,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -249,7 +247,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string ShipAddress = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
 
         }
@@ -261,7 +259,7 @@ namespace Testing4
             String Error = "";
             string ShipAddress = "";
             ShipAddress = ShipAddress.PadRight(101, 'a');
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -272,7 +270,7 @@ namespace Testing4
             String Error = "";
             string ShipAddress = "";
             ShipAddress = ShipAddress.PadRight(500, 'a');
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
         
@@ -285,7 +283,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddYears(-100);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid( UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -298,7 +296,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-1);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid( UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -310,7 +308,7 @@ namespace Testing4
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreEqual(Error, "");
         }
 
@@ -323,7 +321,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(1);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -336,7 +334,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddYears(100);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -346,7 +344,7 @@ namespace Testing4
             clsOrder AnOrder = new clsOrder();
             String Error = "";
             string OrderDate = "This is not a date! ";
-            Error = AnOrder.Valid(OrderID, UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
     }

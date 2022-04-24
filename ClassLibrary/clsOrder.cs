@@ -36,7 +36,7 @@ namespace ClassLibrary
             }
         }
 
-        public DateTime DateAdded
+        public DateTime OrderDate
         {
             get
             {
@@ -105,7 +105,7 @@ namespace ClassLibrary
             
         }
 
-        public string Valid(Int32 OrderID, Int32 UnitQunatity, Double TotalPrice, string ShipAddress, string OrderDate)
+        public string Valid(string UnitQuantity, String TotalPrice, string ShipAddress, string OrderDate)
         {
             String Error = "";
             DateTime DateTemp;
@@ -119,6 +119,9 @@ namespace ClassLibrary
             {
                 Error = Error + "The ship address must not exceed 100 characters. ";
             }
+
+
+
             try
             {
                 DateTemp = Convert.ToDateTime(OrderDate);

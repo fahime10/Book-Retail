@@ -181,17 +181,19 @@ namespace Testing4
             clsOrderCollection FilteredOrders = new clsOrderCollection();
             Boolean OK = true;
 
-            FilteredOrders.ReportByShipAddress("yyy yyy");
+            FilteredOrders.ReportByShipAddress("Hill House, Desford, DE23 4ED");
             if(FilteredOrders.Count == 2)
             {
-                if (FilteredOrders.OrderList[0].OrderID != 36)
+                if (FilteredOrders.OrderList[0].OrderID != 2)
                 {
                     OK = false;
                 }
-                if 9FilteredOrders.OrderList[1].OrderID != 37){
+                if (FilteredOrders.OrderList[1].OrderID != 50) { 
                     OK = false;
 
                 }
+         
+
             }
             else
             {

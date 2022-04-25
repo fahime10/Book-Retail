@@ -221,12 +221,12 @@ namespace Testing1
             if(FilteredBooks.Count == 2)
             {
                 //check that the first record is id 7
-                if(FilteredBooks.BookList[0].BookId != 7)
+                if(FilteredBooks.BookList[0].BookId != 1007)
                 {
                     OK = false;
                 }
                 //check that the first records is id 15
-                if(FilteredBooks.BookList[1].BookId != 15)
+                if(FilteredBooks.BookList[1].BookId != 1008)
                 {
                     OK = false;
                 }

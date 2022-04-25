@@ -194,3 +194,17 @@ H:\Desktop\Agile\24-04-2\Testing5\obj\Debug\Testing5.csproj.CoreCompileInputs.ca
 H:\Desktop\Agile\24-04-2\Testing5\obj\Debug\Testing5.csproj.CopyComplete
 H:\Desktop\Agile\24-04-2\Testing5\obj\Debug\Testing5.dll
 H:\Desktop\Agile\24-04-2\Testing5\obj\Debug\Testing5.pdb
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Testing5.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Testing5.pdb
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\Agile\25-04\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\Agile\25-04\Testing5\obj\Debug\Testing5.csproj.AssemblyReference.cache
+H:\Desktop\Agile\25-04\Testing5\obj\Debug\Testing5.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\25-04\Testing5\obj\Debug\Testing5.csproj.CopyComplete
+H:\Desktop\Agile\25-04\Testing5\obj\Debug\Testing5.dll
+H:\Desktop\Agile\25-04\Testing5\obj\Debug\Testing5.pdb

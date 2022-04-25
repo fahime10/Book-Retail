@@ -25,5 +25,10 @@ public partial class _1_List : System.Web.UI.Page
         lstCustomerList.DataBind();
     }
 
-    
+
+
+    protected void lstCustomerList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

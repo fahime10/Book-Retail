@@ -112,3 +112,9 @@ H:\Desktop\Agile\24-04-2\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Desktop\Agile\24-04-2\ClassLibrary\obj\Debug\ClassLibrary.pdb
 H:\Desktop\Agile\24-04-2\ClassLibrary\bin\Debug\ClassLibrary.dll
 H:\Desktop\Agile\24-04-2\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\25-04\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\25-04\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\25-04\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Desktop\Agile\25-04\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\25-04\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Desktop\Agile\25-04\ClassLibrary\obj\Debug\ClassLibrary.pdb

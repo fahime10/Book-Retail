@@ -8,14 +8,29 @@ using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+    Int32 CustomerID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        CustomerID = Convert.ToInt32(Session["CustomerID"]);
+        if (IsPostBack == false)
+        {
+            if (CustomerID != -1)
+            {
+                DisplayCustomer();
+            }
+        }
     }
 
-    protected void chkExistingAcc_CheckedChanged(object sender, EventArgs e)
+    void DisplayCustomer()
     {
-
+        clsCustomerCollection Customers = new clsCustomerCollection();
+        Customers.ThisCustomer.Find(CustomerID);
+        txtCustomerID.Text = Customers.ThisCustomer.CustomerID.ToString();
+        txtCustomerFirstName.Text = Customers.ThisCustomer.CustomerFirstName;
+        txtCustomerLastName.Text = Customers.ThisCustomer.CustomerLastName;
+        txtCustomerAddress.Text = Customers.ThisCustomer.CustomerAddress;
+        txtCustomerAccCreated.Text = Customers.ThisCustomer.CustomerAccCreated.ToString();
+        chkExistingAcc.Checked = Customers.ThisCustomer.ExistingAcc;
     }
 
     protected void btnOK_Click(object sender, EventArgs e)
@@ -33,17 +48,28 @@ public partial class _1_DataEntry : System.Web.UI.Page
         string CustomerFirstName = txtCustomerFirstName.Text;
         string CustomerLastName = txtCustomerLastName.Text;
         string CustomerAddress = txtCustomerAddress.Text;
-        string CustomerAccountCreated = txtCustomerAccCreated.Text;
+        string CustomerAccCreated = txtCustomerAccCreated.Text;
         string Error = "";
-        Error = TheCustomer.Valid(CustomerFirstName, CustomerLastName, CustomerAddress, CustomerAccountCreated);
+        Error = TheCustomer.Valid(CustomerFirstName, CustomerLastName, CustomerAddress, CustomerAccCreated);
         if (Error == "")
         {
+            TheCustomer.CustomerID = CustomerID;
             TheCustomer.CustomerFirstName = CustomerFirstName;
             TheCustomer.CustomerLastName = CustomerLastName;
             TheCustomer.CustomerAddress = CustomerAddress;
-            TheCustomer.CustomerAccCreated = Convert.ToDateTime(CustomerAccountCreated);
-            Session["TheCustomer"] = TheCustomer;
-            Response.Write("CustomerViewer.aspx");
+            TheCustomer.CustomerAccCreated = Convert.ToDateTime(CustomerAccCreated);
+            TheCustomer.ExistingAcc = chkExistingAcc.Checked;
+            clsCustomerCollection CustomerList = new clsCustomerCollection();
+            //CustomerList.ThisCustomer = TheCustomer;
+            //CustomerList.Add();
+            //Response.Write("CustomerViewer.aspx");
+
+            if (CustomerID == -1)
+            {
+                CustomerList.ThisCustomer = TheCustomer;
+                CustomerList.Add();
+            }
+            Response.Redirect("CustomerList.aspx");
         }
         else
         {

@@ -89,7 +89,7 @@ namespace Testing1
             Assert.AreEqual(AllBooks.Count, TestList.Count);
         }
 
-        /*[TestMethod]
+        [TestMethod]
         public void AddMethodOK()
         {
             //create an instance of clsBookCollection
@@ -100,7 +100,7 @@ namespace Testing1
             Int32 PrimaryKey = 0;
             //set its properties
             TestItem.BookId = 1;
-            TestItem.BookTitle = "Cooking book";
+            TestItem.BookTitle = "Random book";
             TestItem.BookPrice = 10.00;
             TestItem.BookQuantity = 100;
             TestItem.BookAvailability = true;
@@ -117,7 +117,7 @@ namespace Testing1
             Assert.AreEqual(AllBooks.ThisBook, TestItem);
         }
 
-        /*[TestMethod]
+        [TestMethod]
         public void UpdateMethodOK()
         {
             //create an instance of clsBookCollection
@@ -127,7 +127,7 @@ namespace Testing1
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.BookTitle = "Cooking book Vol.I";
+            TestItem.BookTitle = "Random book Vol.I";
             TestItem.BookPrice = 10.00;
             TestItem.BookQuantity = 100;
             TestItem.BookAvailability = true;
@@ -139,7 +139,7 @@ namespace Testing1
             //set the primary key of the test data
             TestItem.BookId = PrimaryKey;
             //modify the test data
-            TestItem.BookTitle = "Cooking book Vol.II";
+            TestItem.BookTitle = "Random book Vol.II";
             TestItem.BookPrice = 11.00;
             TestItem.BookQuantity = 74;
             TestItem.BookAvailability = false;
@@ -163,7 +163,7 @@ namespace Testing1
             Int32 PrimaryKey = 0;
             //set its properties
             TestItem.BookId = 1;
-            TestItem.BookTitle = "Cooking book";
+            TestItem.BookTitle = "Random book";
             TestItem.BookPrice = 10.00;
             TestItem.BookQuantity = 100;
             TestItem.BookAvailability = true;
@@ -182,7 +182,7 @@ namespace Testing1
             Boolean Found = AllBooks.ThisBook.Find(PrimaryKey);
             //test to see that the values are the same
             Assert.IsFalse(Found);
-        }*/
+        }
 
         [TestMethod]
         public void ReportByBookTitleMethodOK()

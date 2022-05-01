@@ -120,6 +120,26 @@ namespace ClassLibrary
                 Error = Error + "The ship address must not exceed 100 characters. ";
             }
 
+            if (UnitQuantity.Length == 0)
+            {
+                Error = Error + "The unit quantity may not be blank";
+
+            }
+
+            if(UnitQuantity.Length > 10)
+            {
+                Error = Error + "The unit quantity may not exceed 100 characters.";
+            }
+
+            if(TotalPrice.Length == 0)
+            {
+                Error = Error + "The total price may not be blank";
+            }
+
+            if(TotalPrice.Length > 10)
+            {
+                Error = Error + "The total price cannot exceed 10 characters.";
+            }
 
 
             try

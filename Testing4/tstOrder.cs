@@ -142,7 +142,7 @@ namespace Testing4
             DateTime TestData = DateTime.Now.Date;
             AnOrder.OrderDate = TestData;
             Assert.AreEqual(AnOrder.OrderDate, TestData);
-            
+
         }
 
         [TestMethod]
@@ -180,7 +180,7 @@ namespace Testing4
             AnOrder.OrderID = TestData;
             Assert.AreEqual(AnOrder.OrderID, TestData);
         }
-        
+
         [TestMethod]
         public void ValidMethodOK()
         {
@@ -273,7 +273,7 @@ namespace Testing4
             Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
-        
+
         [TestMethod]
         public void OrderDateExtremeMin()
         {
@@ -283,7 +283,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddYears(-100);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid( UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -296,7 +296,7 @@ namespace Testing4
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-1);
             string OrderDate = TestDate.ToString();
-            Error = AnOrder.Valid( UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -347,5 +347,180 @@ namespace Testing4
             Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
             Assert.AreNotEqual(Error, "");
         }
+
+        [TestMethod]
+        public void UnitQuantityinLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UnitQuantityMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "a";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UnitQuantityMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "aa";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UnitQuantityMaxLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "";
+            UnitQuantity = UnitQuantity.PadRight(9, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UnitQuantityMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "";
+            UnitQuantity = UnitQuantity.PadRight(10, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UnitQuantityMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "";
+            UnitQuantity = UnitQuantity.PadRight(11, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+
+        [TestMethod]
+        public void UnitQuantityMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "aaaaa";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void UnitQuantityExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string UnitQuantity = "";
+            UnitQuantity = UnitQuantity.PadRight(500, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+        [TestMethod]
+        public void TotalPriceinLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+
+        [TestMethod]
+        public void TotalPriceMin()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "a";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceMinPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "aa";
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceMaxLessOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            TotalPrice = TotalPrice.PadRight(9, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            TotalPrice = TotalPrice.PadRight(10, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceMaxPlusOne()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            TotalPrice = TotalPrice.PadRight(11, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceMid()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            TotalPrice = TotalPrice.PadRight(5, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TotalPriceExtremeMax()
+        {
+            clsOrder AnOrder = new clsOrder();
+            String Error = "";
+            string TotalPrice = "";
+            TotalPrice = TotalPrice.PadRight(500, 'a');
+            Error = AnOrder.Valid(UnitQuantity, TotalPrice, ShipAddress, OrderDate);
+            Assert.AreNotEqual(Error, "");
+        }
+
     }
 }

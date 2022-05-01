@@ -130,3 +130,9 @@ H:\Desktop\Agile\25-04-2\ClassLibrary\obj\Debug\ClassLibrary.pdb
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 25-04-2022\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 25-04-2022\ClassLibrary\obj\Debug\ClassLibrary.dll
 \\vfiler1.lec-admin.dmu.ac.uk\Home2\P2597742\Documents\Agile visual studios code 25-04-2022\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\01-05\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\Desktop\Agile\01-05\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\Desktop\Agile\01-05\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+H:\Desktop\Agile\01-05\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+H:\Desktop\Agile\01-05\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\Desktop\Agile\01-05\ClassLibrary\obj\Debug\ClassLibrary.pdb

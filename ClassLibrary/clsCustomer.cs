@@ -138,7 +138,7 @@ namespace ClassLibrary
 
             if (customerAddress.Length > 50)
             {
-                Error = Error + "The Customers address must be less than 25 characters : ";
+                Error = Error + "The Customers address must be less than 50 characters : ";
             }
             try
             {

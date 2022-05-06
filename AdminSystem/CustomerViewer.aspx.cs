@@ -12,11 +12,11 @@ public partial class _1Viewer : System.Web.UI.Page
     {
         clsCustomer TheCustomer = new clsCustomer();
         TheCustomer = (clsCustomer)Session["TheCustomer"];
-        Response.Write(TheCustomer.CustomerID);
-        Response.Write(TheCustomer.CustomerFirstName);
-        Response.Write(TheCustomer.CustomerLastName);
-        Response.Write(TheCustomer.CustomerAddress);
-        Response.Write(TheCustomer.CustomerAccCreated);
+        Response.Write(TheCustomer.CustomerID + "\n");
+        Response.Write(TheCustomer.CustomerFirstName + "\n");
+        Response.Write(TheCustomer.CustomerLastName + "\n");
+        Response.Write(TheCustomer.CustomerAddress + "\n");
+        Response.Write(TheCustomer.CustomerAccCreated + "\n");
 
 
 

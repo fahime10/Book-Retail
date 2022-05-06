@@ -35,15 +35,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-       /* clsCustomer TheCustomer = new clsCustomer();
-        TheCustomer.CustomerID = Convert.ToInt32(txtCustomerID.Text);
-        TheCustomer.CustomerFirstName = txtCustomerFirstName.Text;
-        TheCustomer.CustomerLastName = txtCustomerLastName.Text;
-        TheCustomer.CustomerAddress = txtCustomerAddress.Text;
-        TheCustomer.CustomerAccCreated = Convert.ToDateTime(txtCustomerAccCreated.Text);
-        TheCustomer.ExistingAcc = chkExistingAcc.Checked;
-        Session["TheCustomer"] = TheCustomer;
-        Response.Write("CustomerViewer.aspx");*/
+      
         clsCustomer TheCustomer = new clsCustomer();
         string CustomerFirstName = txtCustomerFirstName.Text;
         string CustomerLastName = txtCustomerLastName.Text;
@@ -60,9 +52,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
             TheCustomer.CustomerAccCreated = Convert.ToDateTime(CustomerAccCreated);
             TheCustomer.ExistingAcc = chkExistingAcc.Checked;
             clsCustomerCollection CustomerList = new clsCustomerCollection();
-            //CustomerList.ThisCustomer = TheCustomer;
-            //CustomerList.Add();
-            //Response.Write("CustomerViewer.aspx");
+           
 
             if (CustomerID == -1)
             {
@@ -92,5 +82,10 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtCustomerAccCreated.Text = TheCustomer.CustomerAccCreated.ToString();
         }
 
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CustomerList.aspx");
     }
 }

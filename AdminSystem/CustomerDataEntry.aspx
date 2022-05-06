@@ -23,7 +23,7 @@
         <asp:TextBox ID="txtCustomerAddress" runat="server" height="35px" style="margin-left: 43px" width="360px"></asp:TextBox>
         <br />
         <asp:Label ID="lblCustomerAccCreated" runat="server" Text="When account was created"></asp:Label>
-        <asp:TextBox ID="txtCustomerAccCreated" runat="server" Height="44px" style="margin-left: 303px" width="359px"></asp:TextBox>
+        <asp:TextBox ID="txtCustomerAccCreated" runat="server" Height="44px" style="margin-left: 47px" width="359px"></asp:TextBox>
         <br />
         <br />
         <asp:CheckBox ID="chkExistingAcc" runat="server" Text="Does Account Exist" />
@@ -32,7 +32,7 @@
         <asp:Label ID="lblError" runat="server"></asp:Label>
         <p>
             <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="margin-left: 0px" Text="OK" />
-            <asp:Button ID="btnCancel" runat="server" style="margin-left: 29px" Text="Cancel" />
+            <asp:Button ID="btnCancel" runat="server" style="margin-left: 29px" Text="Cancel" OnClick="btnCancel_Click" />
         </p>
     </form>
 </body>

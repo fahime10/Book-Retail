@@ -112,10 +112,6 @@ namespace ClassLibrary
             PopulateArray(DB);
         }
 
-        /* public int Add()
-         {
-             mThisCustomer.CustomerID = 12;
-             return mThisCustomer.CustomerID;
-         }*/
+       
     }
 }
